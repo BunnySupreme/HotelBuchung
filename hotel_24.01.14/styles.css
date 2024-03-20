@@ -1,0 +1,223 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+    /* For mobile phones: (mobile first) */
+    /*wichtig sobald wir columns verwenden*/
+    [class*="col-"]{
+        width: 100%;
+}
+    [class*="user_icon"]{
+        display: none
+}
+
+@media only screen and (min-width: 768px){
+/* For desktop: */
+/*Für wenn wir columns verwenden*/
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+}
+
+.user_icon{border: 0px;}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("fonts/roboto/Roboto-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url("fonts/open-sans.regular.ttf") format('truetype');
+}
+
+body {font-family: 'Open Sans';}
+body {background-color: #121212;
+    color: white;
+    padding:30px;
+    /*background-image: url('img/lobby.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;*/
+}
+h1 {font-family: 'Open Sans';
+    color: white;}
+h2 {font-family: 'Open Sans';
+    color: white;}
+p {color: white;
+    font-family: 'Open Sans';}
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+    }
+
+.form-buchen {
+    max-width: 600px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.dropdown-item {
+    color: #000 !important;
+  }
+
+.form-news {
+    color: #121212;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 15px;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.larger-text-field {
+    width: 300px;
+    height: 100px;
+    font-size: 16px;
+    resize: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+    line-height: 1; /* Ensures the text is at the top of the textarea */
+    vertical-align: top; /* Aligns the textarea content to the top */
+    }
+
+
+
+a:link {color: white; font-family: 'Open Sans'}
+a:visited {color: white; font-family: 'Open Sans'}
+
+footer {text-align: center;
+        font-family: 'Open Sans';}
+
+ul {font-family: 'Open Sans';}
+
+.nav-left {float:left}
+.nav-right {float:right}
+
+.form-signin {
+    text-align: center;
+}
+
+.form-signin label {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.form-signin button {
+    margin-top: 10px;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Add a white semi-transparent bg on hover */
+    border-radius: 10px; /* Add rounded corners */
+}
+
+/* homepage slider */
+.slider {
+    height: 600px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.slider::before, .slider::after {
+    background: linear-gradient(to right, #121212 0%, rgba(0,0,0,0) 100%);
+    content: "";
+    height: 600px;
+    position: absolute;
+    width: 900px;
+    z-index: 2;
+}
+.slider::after {
+    right:0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+.slider::before {
+    left: 0;
+    top: 0;
+}
+/* reset time */
+.slider .slide-track {
+    display: flex;
+    -webkit-animation: scroll 40s linear infinite;
+    animation: scroll 40s linear infinite;
+    width: calc(900px * 1);
+}
+.slider .slide {
+    height: 600px;
+    width: 900px;
+}
+/* scroll speed */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-900px * 4));
+    }
+}
+
+/* change profile photo button */
+#fileInput {
+    display: none;
+  }
+
+#customButton {
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+
+/* reservierungsverwaltung table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #7a7a7a;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #9b9696;
+}
+
+tr:nth-child(odd) {
+    background-color: #b3afaf;
+}
+
+tr:hover {
+    background-color: #868383;
+}
